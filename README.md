@@ -16,8 +16,9 @@ This is a basic Ticket Management System built with Node.js and MongoDB. The sys
 ## Project Setup
 
 Prerequisites
-Node.js: Download and install Node.js
-MongoDB: Install MongoDB locally or use MongoDB Atlas for cloud-based hosting.
+
+    Node.js: Download and install Node.js
+    MongoDB: Install MongoDB locally or use MongoDB Atlas for cloud-based hosting.
 
 ## Installation
 
@@ -28,20 +29,20 @@ MongoDB: Install MongoDB locally or use MongoDB Atlas for cloud-based hosting.
 
 2. Install project dependencies:
 
-                      npm install
+                    npm install
 
 3. Environment Variables: Create a .env file in the root directory of your project with the following variables:
 
-        PORT=5000
-         MONGO_URI= mongodb+srv://dr1872002:Deepak3221@cluster0.jlnklez.mongodb.net/ticket-management-system
+                  PORT=5000
+                  MONGO_URI= mongodb+srv://dr1872002:Deepak3221@cluster0.jlnklez.mongodb.net/ticket-management-system
 
 4. Run the project:
 
-                      node index.js
+                 node index.js
 
 5. Server will run on: 
                 
-                  http://localhost:5000
+                http://localhost:5000
 ## API Endpoints
 
 1. Create a Ticket :-
@@ -54,10 +55,21 @@ MongoDB: Install MongoDB locally or use MongoDB Atlas for cloud-based hosting.
 
     iii) Request Body :
     
-       {
-         "title": "Issue with login",
-          "description": "User is unable to log in."
-        }
+                   {
+                      "title": "Issue with login",
+                      "description": "User is unable to log in."
+                   }
+
+    iv) Response:
+
+                  {
+                       "_id": "64faacb8e1797e9a12345678",
+                       "title": "Issue with login",
+                       "description": "User is unable to log in.",
+                       "status": "open",
+                       "createdAt": "2024-09-20T12:00:00.000Z",
+                       "updatedAt": "2024-09-20T12:00:00.000Z"
+                  }
 
 
 2. Get All Tickets :-
@@ -67,6 +79,24 @@ MongoDB: Install MongoDB locally or use MongoDB Atlas for cloud-based hosting.
                      GET /api/getAll-tickets
 
     ii) Description: Retrieves all tickets.
+
+    iii) Response:
+
+         {
+             "totalCount": 9,
+             "tickets": [
+                        {
+                            "_id": "64faacb8e1797e9a12345678",
+                            "title": "Issue with login",
+                            "description": "User is unable to log in.",
+                            "status": "open",
+                            "createdAt": "2024-09-20T12:00:00.000Z",
+                            "updatedAt": "2024-09-20T12:00:00.000Z"
+                        },
+                          ...
+                        ]
+                   }
+
 
 
 
@@ -81,6 +111,17 @@ ii) Description: Retrieves a specific ticket by its unique ID.
 iii)Path Parameter:
 
                   :id: The unique ID of the ticket.
+
+iv)Response:
+
+            {
+                "_id": "64faacb8e1797e9a12345678",
+                "title": "Issue with login",
+                "description": "User is unable to log in.",
+                "status": "open",
+                "createdAt": "2024-09-20T12:00:00.000Z",
+                "updatedAt": "2024-09-20T12:00:00.000Z"
+            }
 
 
 4. Update a Ticket :-
@@ -181,5 +222,6 @@ Mongoose:
 
 dotenv: 
     To manage environment variables.
+
 
 ## This README.md file now contains all the necessary details about your Ticket Management System project, including setup instructions, API endpoint documentation, and other important information.
