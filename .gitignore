@@ -2,5 +2,5 @@
 node_modules/
 
 
-# # Ignore .env files containing sensitive information
+# Ignore .env file
 .env
