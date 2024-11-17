@@ -34,7 +34,7 @@ Prerequisites
 3. Environment Variables: Create a .env file in the root directory of your project with the following variables:
 
                   PORT=5000
-                  MONGO_URI= mongodb+srv://dr1872002:Deepak3221@cluster0.jlnklez.mongodb.net/ticket-management-system
+                  MONGO_URI
 
 4. Run the project:
 
